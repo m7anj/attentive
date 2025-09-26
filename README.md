@@ -1,6 +1,6 @@
 # Attentive - AFK Meeting Assistant
 
-Stay in the loop during meetings even when away from your keyboard.
+Stay in the loop during meetings even when away from your keyboard. Recieve a phone notification for when your name is recognised alongside the context around it. Either provide your own response in the meeting chat, away from your keyboard or use one of the context-based AI-generated responses.
 
 ## Project Structure
 
@@ -17,30 +17,7 @@ attentive/
 └── .env.example           # Environment variables template
 ```
 
-## Getting Started
-
-1. **Setup Environment Variables**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your API keys
-   ```
-
-2. **Install Dependencies** (already done)
-   ```bash
-   cd desktop-agent && npm install
-   cd ../backend && npm install
-   ```
-
-3. **Run Development**
-   ```bash
-   # Terminal 1 - Backend API
-   cd backend && npm run dev
-
-   # Terminal 2 - Desktop Agent
-   cd desktop-agent && npm run dev
-   ```
-
-## Key Dependencies Installed
+## Key Dependencies
 
 ### Desktop Agent (Electron.js)
 - **electron**: Desktop app framework
@@ -57,27 +34,3 @@ attentive/
 - **natural & compromise**: Text processing
 - **openai**: AI summaries
 - **ws**: WebSocket for real-time communication
-
-## API Setup Required
-
-1. **Google Cloud Speech-to-Text**
-   - Create project at console.cloud.google.com
-   - Enable Speech-to-Text API
-   - Create service account & download JSON key
-
-2. **Firebase** (for notifications)
-   - Create project at console.firebase.google.com
-   - Generate service account key
-
-3. **OpenAI** (for summaries)
-   - Get API key from platform.openai.com
-
-## Development Tips
-
-- Start with basic audio capture in desktop-agent
-- Build transcription pipeline in backend
-- Add keyword detection
-- Implement notifications last
-- Test with simple audio files first
-
-Good luck learning! The environment is ready for you to start coding.
