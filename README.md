@@ -1,38 +1,8 @@
 # Attentive - AFK Meeting Assistant
 
-Stay in the loop during meetings even when away from your keyboard. Recieve a phone notification for when your name is recognised alongside the context around it. Either provide your own response in the meeting chat, away from your keyboard or use one of the context-based AI-generated responses.
+#### Stay in the loop during meetings even when away from your keyboard.
 
-## Project Structure
-
-```
-attentive/
-├── desktop-agent/          # Electron.js desktop app
-│   ├── src/
-│   └── package.json
-├── backend/                # Express.js API server
-│   ├── src/
-│   └── package.json
-├── mobile-app/             # React Native mobile app (future)
-├── docs/                   # Documentation
-└── .env.example           # Environment variables template
-```
-
-## macOS Setup
-
-Audio capture on macOS requires additional setup due to system restrictions:
-
-### Install BlackHole (Audio Router)
-```bash
-brew install blackhole-2ch
-```
-and then restart.
-
-### Configure Audio Routing
-1. Open **Audio MIDI Setup** (Applications > Utilities)
-2. Create a **Multi-Output Device**
-3. Add your speakers + BlackHole to the multi-output device
-4. Set target app to output to BlackHole
-5. The desktop agent will capture audio from BlackHole
+Often, when you aren't at your computer during a meeting, and someone says your name or asks you something... how awkward. However, the *Attentive* switch, when turned on, records your system audio until someone says your name and captures the context around it. The application then gives your phone a notification and either will provide your own response in the meeting chat or use one of the context-based AI-generated responses, all from your phone until you come back to your computer.
 
 ## Key Dependencies
 
