@@ -17,6 +17,24 @@ attentive/
 └── .env.example           # Environment variables template
 ```
 
+## macOS Setup
+
+Audio capture on macOS requires additional setup due to system restrictions:
+
+### Install BlackHole (Audio Router)
+```bash
+brew install blackhole-2ch
+```
+
+Or download directly from: https://github.com/ExistentialAudio/BlackHole/releases
+
+### Configure Audio Routing
+1. Open **Audio MIDI Setup** (Applications > Utilities)
+2. Create a **Multi-Output Device**
+3. Add your speakers + BlackHole to the multi-output device
+4. Set Discord (or target app) to output to BlackHole
+5. The desktop agent will capture audio from BlackHole
+
 ## Key Dependencies
 
 ### Desktop Agent (Electron.js)
